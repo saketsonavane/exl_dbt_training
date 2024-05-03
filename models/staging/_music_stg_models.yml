@@ -1,0 +1,90 @@
+version : 2
+
+models:
+  - name: stg_music__album
+    description: This model has the name of album and artists who created albums
+    columns:
+      - name: album_id
+        tests:
+          - unique
+          - not_null
+  
+  - name: stg_music__artists
+    description: This model has the name of artists corresponding artist_id
+    columns:
+      - name: artist_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music__customers
+    description: This model has customer information and personal details
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music__employees
+    description: This model has the employee information
+    columns:
+      - name: employee_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music__genres
+    description: This model maps genre_id with genres
+    columns:
+      - name: genre_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music__invoice_lines
+    description: This model has the invoice lines information
+    columns:
+      - name: invoice_lineid
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music__invoices
+    description: This model has invoices data with billing address
+    columns:
+      - name: invoice_id
+        tests:
+          - unique
+          - not_null
+          
+  - name: stg_music__media_types
+    description: This model maps media types
+    columns:
+      - name: mediatype_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music__playlist_tracks
+    description: This model has playlist and track information
+    columns:
+      - name: track_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music__playlists
+    description: This model has playlist_id and playlist name mapping
+    columns:
+      - name: playlist_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music__tracks
+    description: This model has information on tracks like artist_name, duration, id etc.
+    columns:
+      - name: track_id
+        tests:
+          - unique
+          - not_null
