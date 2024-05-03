@@ -2,7 +2,7 @@ select
     customerid as customer_id,
     firstname as first_name,
     lastname as last_name,
-    company as work_company
+    company as work_company,
     address as customer_mailing_address,
     city as customer_mailing_city,
     state as customer_mailing_state,

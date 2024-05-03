@@ -8,6 +8,6 @@ select
     milliseconds as track_length_ms,
     bytes as bytes,
     unitprice as unit_price,
-    milliseconds*60 as track_length_seconds,
-    milliseconds*3600 as track_length_mins
-from {{ source('music', 'track') }}
+    milliseconds * 60 as track_length_seconds,
+    milliseconds * 3600 as track_length_mins
+from {{ source("music", "track") }}
