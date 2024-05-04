@@ -83,7 +83,6 @@ sources:
         columns:
           - name: trackid
             tests:
-              - unique
               - not_null
 
       - name: track

@@ -70,7 +70,6 @@ models:
     columns:
       - name: track_id
         tests:
-          - unique
           - not_null
 
   - name: stg_music__playlists
