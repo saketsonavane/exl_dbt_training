@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: fct_music_sales
+    description: 
+      This model has all the sales information. Intermediate models customers and employees, invoice_lines 
+      and tracks information is joined together.
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+  
+  - name: dim_music_playlists
+    description: 
+      This is a dimension model which has staging playlist & playlist tracks joined with tracks information.
+      Consisting of album and artist with genres and mediatypes.
+    columns:
+      - name: playlist_id
+        tests:
+          - not_null
+          
+  - name: dim_music_tracks
+    description: 
+      This is a dimension model of int_tracks model which has tracks information with ablum, artist,
+      genre and mediatype information 
+    columns:
+      - name: track_id
+        tests:
+          - not_null
+            

@@ -1,0 +1,94 @@
+version: 2
+
+sources:
+  - name: music
+    database: music
+    schema: dwh_training
+
+    tables:
+      - name: album
+        description: This is a raw table having data of music albums
+        columns:
+          - name: albumid
+            tests:
+              - unique
+              - not_null
+
+      - name: artist
+        description: This is a raw table having artist data.
+        columns:
+          - name: artistid
+            tests:
+              - unique
+              - not_null
+
+      - name: customer
+        description: This is a raw table having customer level data.
+        columns:
+          - name: customerid
+            tests:
+              - unique
+              - not_null
+
+      - name: employee
+        description: This is a raw table having employee data.
+        columns:
+          - name: employeeid
+            tests:
+              - unique
+              - not_null
+
+      - name: genre
+        description: This is a raw table having genre mapping information
+        columns:
+          - name: genreid
+            tests:
+              - unique
+              - not_null
+
+      - name: invoice
+        description: This is a raw table having all invoies information
+        columns:
+          - name: invoiceid
+            tests:
+              - unique
+              - not_null
+
+      - name: invoiceline
+        description: This is a raw table for invoicelines data
+        columns:
+          - name: invoicelineid
+            tests:
+              - unique
+              - not_null
+
+      - name: mediatype
+        description: This is a raw table having mediatype information
+        columns:
+          - name: mediatypeid
+            tests:
+              - unique
+              - not_null
+
+      - name: playlist
+        description: This is a raw table having all playlist data.
+        columns:
+          - name: playlistid
+            tests:
+              - unique
+              - not_null
+
+      - name: playlisttrack
+        description: This is a raw table having playlist track data
+        columns:
+          - name: trackid
+            tests:
+              - not_null
+
+      - name: track
+        description: This is a raw table having track data
+        columns:
+          - name: trackid
+            tests:
+              - unique
+              - not_null
